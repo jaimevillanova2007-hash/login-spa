@@ -1,0 +1,43 @@
+{
+
+
+    "user":[
+    
+        {
+          "id": 1,
+          "name": "Juan Pérez",
+          "role": "admin",
+          "email": "juan@example.com",
+          "password": "123456"
+        },
+        {
+          "id": 2,
+          "name": "María Gómez",
+          "role": "client",
+          "email": "maria@example.com",
+          "password": "abcdef"
+        },
+        {
+          "id": 3,
+          "name": "Carlos Rodríguez",
+          "role": "client",
+          "email": "carlos@example.com",
+          "password": "qwerty"
+        },
+        {
+          "id": 4,
+          "name": "Ana Martínez",
+          "role": "seller",
+          "email": "ana@example.com",
+          "password": "pass123"
+        },
+        {
+          "id": 5,
+          "name": "Luis Torres",
+          "role": "client",
+          "email": "luis@example.com",
+          "password": "admin123"
+        }
+      ]
+    
+}
