@@ -2,15 +2,16 @@
 
 import { events, formLogin } from "./views/login";
 import { clientLogout,renderCards, client } from "./views/client";
-import { sellerLogout,seller , renderSeller, addCard} from "./views/seller";
-import { admin , adminEvents } from "./views/admin";
+import { sellerLogout,seller , renderSeller, addCard, editProduct} from "./views/seller";
+import { admin , adminLogout, renderAdmin, addCardAdmin, editProductAdmin, showUsers } from "./views/admin";
+
 
 // creamo un objeto con cada ruta
 const routes = {
     "/": {path:formLogin,events:events},
     "/client":{path:client, events:renderCards, logout:clientLogout},
-    "/seller":{path:seller, events:renderSeller, logout:sellerLogout, addCard:addCard},
-    "/admin" :{path:admin, events:adminEvents}
+    "/seller":{path:seller, events:renderSeller, logout:sellerLogout, addCard:addCard, editProduct:editProduct},
+    "/admin" :{path:admin, events:renderAdmin, logout:adminLogout, addCard:addCardAdmin, editProduct:editProductAdmin, showUsers}
 }
 
 // una funcion que renderiza dependiendo la ruta 
@@ -36,9 +37,11 @@ export function router (){
             // modificamos el html
             document.getElementById("app").innerHTML = view();
             // accedemos a los eventos
-            routes[path].events()
-            routes[path].logout()
-            routes[path].addCard()
+            routes[path].events?.();
+            routes[path].logout?.();
+            routes[path].addCard?.();
+            routes[path].editProduct?.();
+            routes[path].showUsers?.();
 
     }
     

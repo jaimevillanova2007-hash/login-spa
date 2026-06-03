@@ -41,17 +41,9 @@
       "id": "1",
       "name": "Running Shoes",
       "description": "Lightweight running shoes designed for daily workouts and long-distance training.",
-      "stock": 15,
-      "price": 89.99,
+      "stock": "33434",
+      "price": "34343434",
       "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
-    },
-    {
-      "id": "2",
-      "name": "Smart Watch",
-      "description": "Modern smartwatch with heart-rate monitoring, notifications, and fitness tracking.",
-      "stock": 8,
-      "price": 129.99,
-      "url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
     },
     {
       "id": "3",
@@ -84,14 +76,6 @@
       "stock": 10,
       "price": 69.99,
       "url": "https://images.unsplash.com/photo-1589003077984-894e133dabab?w=600"
-    },
-    {
-      "name": "webcam",
-      "description": "webcam camera in fps 144 zoom adf adfakdlas",
-      "stock": "6",
-      "price": "34",
-      "url": "https://www.kelyx.com.ar/images/000000000041730228266webcam-kelyx-1.jpg",
-      "id": "7xOQps-7Ko8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

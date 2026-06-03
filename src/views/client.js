@@ -1,7 +1,8 @@
+// importamos 
 import { router } from "/src/routes";
 import { getPorducts } from "../api";
 
-
+// funcion que renderiza el dashboard del cliente
 export function client (){
     return `<div class="min-h-screen bg-orange-50">
 
@@ -39,22 +40,28 @@ export function client (){
   </main>
 </div>`
 }
-
+// funcion asincrona para hacer el logout
 export async function clientLogout () {
     const btnLogout = document.getElementById("btnLogout")
     btnLogout.addEventListener("click", () => {
+      // limpia lo que haya en el local 
         localStorage.clear()
-        history.pushState({}, "", "http://localhost:5173/")
+        // modifica la url 
+        history.pushState({}, "", "/")
+        // renderiza el dashboard con url actual
         router()
 
     })
 }
-
+// funcion asincorana que renderiza los productos que obtenemos del json 
 export async function renderCards () {
 
     const productsContainer = document.getElementById("products-container");
+    // se crea arreglo con los productos del api
     const products = await getPorducts();
+    // por cada producto crear un nueva carta con innerHTML
     products.forEach((product) => {
+      
         productsContainer.innerHTML += ` <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
         <img
           src=${product.url}
